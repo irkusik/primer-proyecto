@@ -28,5 +28,6 @@ urlpatterns = [
     #path('fecha-actual/', fecha_actual)
     path('fecha-actual/',views.fecha_actual),
     path('saludar/',views.saludar),
-    path('saludar/<str:nombre>/<str:apellido>/',views.bienvenida)
+    path('saludar/<str:nombre>/<str:apellido>/',views.bienvenida),
+    path('crear-perro/<str:nombre>/<int:edad>/', views.crear_perro)
 ]
