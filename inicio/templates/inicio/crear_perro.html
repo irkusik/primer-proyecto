@@ -13,7 +13,7 @@ Crear Perro
 <h2>Se creo el perro con nombre {{perro.nombre}} y edad {{perro.edad}} </h2>
 {% endif %} {% endcomment %}
  
-<form action="" method="POST">
+<form action= {% url 'inicio:crear_perro' %} method="POST">
     {% csrf_token %}
 
     {% comment  %} V1 {% endcomment %}
@@ -30,8 +30,10 @@ Crear Perro
 
 
     {% comment  %} V2 {% endcomment %}
-
-    {{formulario}}
+    <table>
+     {{formulario}}
+    </table>
+    
     <button>Crear</button>
 </form>
 {% endblock contenido %}
